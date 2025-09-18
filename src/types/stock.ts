@@ -32,3 +32,21 @@ export interface StockSearchResult {
 export interface SearchResponse {
   stocks: StockSearchResult[];
 }
+
+export interface HistoricalData {
+  date: string;
+  open: number;
+  high: number;
+  low: number;
+  close: number;
+  volume: number;
+}
+
+export interface ChartData {
+  symbol: string;
+  period: string;
+  data: HistoricalData[];
+  currentPrice: number;
+  change: number;
+  changePercent: number;
+}

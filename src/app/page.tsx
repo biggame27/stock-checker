@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { TrendingUp, AlertCircle } from 'lucide-react';
 import StockSearch from '@/components/StockSearch';
 import StockCard from '@/components/StockCard';
+import StockChart from '@/components/StockChart';
 import { StockData } from '@/types/stock';
 
 export default function Home() {
@@ -77,8 +78,9 @@ export default function Home() {
 
         {/* Stock Data Display */}
         {selectedStock && !isLoading && (
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto space-y-6">
             <StockCard stock={selectedStock} />
+            <StockChart symbol={selectedStock.symbol} />
           </div>
         )}
 

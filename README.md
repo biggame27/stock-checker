@@ -6,7 +6,9 @@ A modern web application for checking real-time stock market data using the Yaho
 
 - 🔍 **Stock Search**: Search for stocks by symbol or company name
 - 📊 **Real-time Data**: Get current stock prices, volume, and market data
-- 📈 **Detailed Information**: View market cap, P/E ratio, 52-week highs/lows, and more
+- 📈 **Interactive Charts**: View price charts with multiple timeframes (1D, 5D, 1M, 3M, 6M, 1Y, 2Y, 5Y)
+- 📉 **Historical Data**: Access historical stock price data with customizable periods
+- 💹 **Detailed Information**: View market cap, P/E ratio, 52-week highs/lows, and more
 - 🎨 **Modern UI**: Clean, responsive design with Tailwind CSS
 - ⚡ **Fast Performance**: Built with Next.js for optimal performance
 
@@ -41,18 +43,22 @@ npm run dev
 
 1. **Search for Stocks**: Use the search bar to find stocks by symbol (e.g., AAPL, TSLA, MSFT) or company name
 2. **View Stock Data**: Click on any search result to view detailed stock information
-3. **Quick Access**: Use the popular stock buttons for quick access to major stocks
+3. **Interactive Charts**: Use the timeframe buttons (1D, 1M, 1Y, etc.) to view price charts for different periods
+4. **Quick Access**: Use the popular stock buttons for quick access to major stocks
 
 ## API Endpoints
 
 - `GET /api/stock?symbol=<SYMBOL>` - Get detailed stock information
 - `GET /api/search?q=<QUERY>` - Search for stocks
+- `GET /api/historical?symbol=<SYMBOL>&period=<PERIOD>` - Get historical stock data for charts
 
 ## Technologies Used
 
 - **Next.js 15** - React framework with App Router
 - **TypeScript** - Type-safe JavaScript
 - **Tailwind CSS** - Utility-first CSS framework
+- **Chart.js** - Interactive charts and graphs
+- **React Chart.js 2** - React wrapper for Chart.js
 - **Yahoo Finance API** - Real-time stock market data
 - **Lucide React** - Beautiful icons
 
