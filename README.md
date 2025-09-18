@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Stock Checker
+
+A modern web application for checking real-time stock market data using the Yahoo Finance API. Built with Next.js, TypeScript, and Tailwind CSS.
+
+## Features
+
+- 🔍 **Stock Search**: Search for stocks by symbol or company name
+- 📊 **Real-time Data**: Get current stock prices, volume, and market data
+- 📈 **Detailed Information**: View market cap, P/E ratio, 52-week highs/lows, and more
+- 🎨 **Modern UI**: Clean, responsive design with Tailwind CSS
+- ⚡ **Fast Performance**: Built with Next.js for optimal performance
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <your-repo-url>
+cd stock-checker
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+## Usage
 
-To learn more about Next.js, take a look at the following resources:
+1. **Search for Stocks**: Use the search bar to find stocks by symbol (e.g., AAPL, TSLA, MSFT) or company name
+2. **View Stock Data**: Click on any search result to view detailed stock information
+3. **Quick Access**: Use the popular stock buttons for quick access to major stocks
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## API Endpoints
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `GET /api/stock?symbol=<SYMBOL>` - Get detailed stock information
+- `GET /api/search?q=<QUERY>` - Search for stocks
 
-## Deploy on Vercel
+## Technologies Used
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Next.js 15** - React framework with App Router
+- **TypeScript** - Type-safe JavaScript
+- **Tailwind CSS** - Utility-first CSS framework
+- **Yahoo Finance API** - Real-time stock market data
+- **Lucide React** - Beautiful icons
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Data Source
+
+This application uses the Yahoo Finance API through the `yahoo-finance2` npm package to fetch real-time stock market data. The data includes:
+
+- Current stock price and change
+- Market capitalization
+- Trading volume
+- P/E ratio and other financial metrics
+- 52-week high/low prices
+- Dividend yield information
+
+## Disclaimer
+
+This application is for educational purposes only. The stock data provided is for informational purposes and should not be considered as financial advice. Always consult with a qualified financial advisor before making investment decisions.
+
+## License
+
+MIT License - feel free to use this project for learning and development purposes.
